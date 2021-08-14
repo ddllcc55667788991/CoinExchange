@@ -36,3 +36,17 @@ nbdist/
 
 /config/
 .gradle
+
+.svn/
+.settings/
+.idea/
+target/
+*.project
+*.class
+*.classpath
+*.iml
+*.uml
+.metadata/
+*.uml
+*.bak
+*.log*
