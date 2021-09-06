@@ -12,4 +12,29 @@
     <artifactId>coin-task</artifactId>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>com.kenji</groupId>
+            <artifactId>coin-common</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kenji</groupId>
+            <artifactId>exchange-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-stream-binder-rocketmq</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kenji</groupId>
+            <artifactId>exchange-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
 </project>

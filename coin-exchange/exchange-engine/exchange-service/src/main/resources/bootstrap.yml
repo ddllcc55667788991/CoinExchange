@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: exchange-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: www.kenji34.com:8848
+      config:
+        file-extension: yaml
+    stream:
+      rocketmq:
+        binder:
+          name-server: www.kenji34.com:9876
+        binders:
+          order_out: {consumer.orderly: true}
+      bindings:
+        order_out: {destination: order_in, content-type: application/plain}
+        exchange_trades_out: {destination: exchange_trades_out, content-type: application/plain, group: trade-group, consumer.maxAttempts: 1}
+#        cancel_order_in: {destination: cancel_order_out, content-type: application/plain, group: cancel-group, consumer.maxAttempts: 1}

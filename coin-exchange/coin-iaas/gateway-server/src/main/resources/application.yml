@@ -1,0 +1,70 @@
+server:
+  port: 80
+spring:
+  application:
+    name: gateway-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: www.kenji34.com:8848   #服务发现地址
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true   #启用小驼峰的服务名称访问服务     admin-service ADMIN-SERVICE /admin-service/** ->微服务（ADMIN-SERVICE）
+          enabled: true   #启用gateway服务发现功能
+      routes:
+        - id: admin-service_router
+          uri: lb://admin-service   #负载均衡到改地址(服务上)
+          predicates:
+            - Path=/admin/**
+          filters:
+            - StripPrefix=1
+        - id: memeber-service_router
+          uri: lb://member-service   #负载均衡到改地址(服务上)
+          predicates:
+            - Path=/user/**
+          filters:
+            - StripPrefix=1
+        - id: finance-service_router
+          uri: lb://finance-service   #负载均衡到改地址(服务上)
+          predicates:
+            - Path=/finance/**
+          filters:
+            - StripPrefix=1
+        - id: exchange-service_router
+          uri: lb://exchange-service   #负载均衡到改地址(服务上)
+          predicates:
+            - Path=/exchange/**
+          filters:
+            - StripPrefix=1
+        - id: test_router
+          uri: http://aliyun.com
+          predicates:
+            - Path=/product
+    sentinel:
+#      filter:
+#        enabled: true
+        #通过网关来完成2种维度的限流：网关维度+API分组
+      datasource:
+#        ds1.file:
+#          file:  classpath:router-flow.json
+#          ruleType: gw-flow
+        ds1.nacos:
+          serverAddr: www.kenji34.com:8848
+          dataId: gw-flow
+          ruleType: gw-flow
+#        ds2.file:
+#          file: classpath:api-flow.json
+#          ruleType: gw_api_group
+        ds2.nacos:
+          serverAddr: :www.kenji34.com:8848
+          dataId: api-group
+          ruleType: gw-api_group
+      transport:
+        dashboard: sentinel-server:8858
+  redis:
+    host: www.kenji34.com
+    port: 6380
+    password: 123456
+
+

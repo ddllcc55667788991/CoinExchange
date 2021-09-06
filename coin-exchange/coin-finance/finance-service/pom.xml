@@ -23,6 +23,34 @@
             <artifactId>coin-common</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.kenji</groupId>
+            <artifactId>member-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!--mapStruct依赖 高性能对象映射-->
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-jdk8</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-processor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.supercsv</groupId>
+            <artifactId>super-csv</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kenji</groupId>
+            <artifactId>admin-api</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.kenji</groupId>
+            <artifactId>exchange-api</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

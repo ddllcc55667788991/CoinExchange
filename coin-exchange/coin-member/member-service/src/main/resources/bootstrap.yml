@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: member-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: www.kenji34.com:8848
+      config:
+       file-extension: yaml
+    #dataID=member-service-dev.yaml
+
+

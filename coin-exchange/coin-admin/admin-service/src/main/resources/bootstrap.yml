@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: admin-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      server-addr: www.kenji34.com:8848
+      config:
+       file-extension: yaml
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://kenji-mysql.mysql.rds.aliyuncs.com:3306/coin-exchange?serverTimezone=GMT%2B8
+#    username: kenji
+#    password: Kenji123
+
+    #dataID=admin-service-dev
+

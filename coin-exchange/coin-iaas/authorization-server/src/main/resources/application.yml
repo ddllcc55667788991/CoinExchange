@@ -1,0 +1,19 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: authorization-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: www.kenji34.com:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://kenji-mysql.mysql.rds.aliyuncs.com:3306/coin-exchange?serverTimezone=GMT%2B8
+    username: kenji
+    password: Kenji123
+#  redis:
+#    host: www.kenji34.com
+#    port: 6380
+#    password: 123456
+
