@@ -9,7 +9,8 @@
 ![image-20210906140815664](https://user-images.githubusercontent.com/82886608/132171172-6b7cd929-9627-4964-9faf-14ffac154627.png)
 
 # 项目架构图
-![image](https://user-images.githubusercontent.com/82886608/132217601-c0d24ab0-b6c0-4d4f-9485-cea2b2efa39c.png)
+![image](https://user-images.githubusercontent.com/82886608/132217768-492362af-915d-45f9-be3f-1df0780a6e10.png)
+
 
 
 
